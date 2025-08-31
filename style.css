@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'VT323', monospace;
+  background: #c7f0c7;
+  color: #2b2b2b;
+}
+
+header {
+  background: #406343;
+  color: #f1f1d1;
+  padding: 12px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status-panel {
+  background: #f1f1d1;
+  border: 2px solid #2b2b2b;
+  padding: 12px;
+  width: 90%;
+  max-width: 320px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 90%;
+  max-width: 320px;
+}
+
+.action-button {
+  background: #fff;
+  border: 2px solid #2b2b2b;
+  padding: 14px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.action-button:hover {
+  background: #e2e2e2;
+}
+
+.log-area {
+  background: #fff;
+  padding: 12px;
+  margin-top: 16px;
+  width: 90%;
+  max-width: 320px;
+  height: 100px;
+  overflow-y: auto;
+  font-size: 16px;
+  border: 2px solid #2b2b2b;
+  border-radius: 6px;
+}
+
+/* モーダル部分 */
+#modalToggle {
+  display: none;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#modalToggle:checked + header + .container + .modal-overlay {
+  display: flex;
+}
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 300px;
+}
+.modal h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.modal-option {
+  background: #f1f1d1;
+  padding: 10px;
+  margin: 6px 0;
+  border: 2px solid #2b2b2b;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 18px;
+}
+.modal-option:hover {
+  background: #e0e0c0;
+}
+.boss-screen {
+  background: black;
+  color: #0f0;
+  font-family: 'VT323', monospace;
+  padding: 2rem;
+  text-align: center;
+}
+
+.boss-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.boss-button {
+  background: #0f0;
+  color: #000;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+}
+.battle-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.battle-buttons button {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  background-color: #445544;
+  color: #fff;
+  border: 2px solid #ffffff88;
+  border-radius: 6px;
+}

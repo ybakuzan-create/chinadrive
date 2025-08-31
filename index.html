@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>チャイナドライブ</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <input type="checkbox" id="modalToggle" />
+
+  <header>1日目 ／ 14日間</header>
+
+  <div class="container">
+    <div class="status-panel">
+      <div>力：<span id="stat-power">12</span></div>
+      <div>魂：<span id="stat-soul">8</span></div>
+      <div>気：<span id="stat-energy">5</span></div>
+    </div>
+
+    <div class="buttons">
+      <label class="action-button" for="modalToggle">行動</label>
+      <div class="action-button" onclick="rest()">休む</div>
+    </div>
+
+    <div class="log-area" id="log">
+      📜 ログ：ゲーム開始<br>
+    </div>
+  </div>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <h2>行動を選ぶ</h2>
+      <div class="modal-option" onclick="train()">鍛錬（力+3）</div>
+      <div class="modal-option" onclick="meditate()">瞑想（魂+2, 気+1）</div>
+      <div class="modal-option" onclick="explore()">墓地探索（魂+4）</div>
+      <label class="modal-option" for="modalToggle">キャンセル</label>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
